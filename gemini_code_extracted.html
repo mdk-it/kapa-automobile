@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAPA Automobile | Mehr als nur vier Räder</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bronze: {
+                            400: '#c59d7b',
+                            500: '#b48a66',
+                            600: '#967050',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #18181b; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3f3f46; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b48a66; 
+        }
+    </style>
+</head>
+<body class="bg-zinc-900 text-zinc-300 font-sans antialiased flex flex-col min-h-screen selection:bg-bronze-500 selection:text-white">
+    <header class="fixed w-full z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#start">
+                        <img src="image.png" alt="KAPA Automobile Logo" class="h-16 w-auto object-contain">
+                    </a>
+                </div>
+                <!-- Desktop Navigation (Reihenfolge angepasst) -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#fahrzeuge" class="text-zinc-400 hover:text-bronze-500 transition-colors duration-200 text-sm font-medium tracking-wide">Fahrzeuge</a>
+                    <a href="#leistungen" class="text-zinc-400 hover:text-bronze-500 transition-colors duration-200 text-sm font-medium tracking-wide">Unsere Leistungen</a>
+                    <a href="#ueber-uns" class="text-zinc-400 hover:text-bronze-500 transition-colors duration-200 text-sm font-medium tracking-wide">Über uns</a>
+                    <a href="#kontakt" class="text-zinc-400 hover:text-bronze-500 transition-colors duration-200 text-sm font-medium tracking-wide">Kontakt</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-zinc-400 hover:text-white focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#fahrzeuge" class="block px-3 py-2 text-base font-medium text-zinc-400 hover:text-bronze-500 hover:bg-zinc-800 rounded-md">Fahrzeuge</a>
+                <a href="#leistungen" class="block px-3 py-2 text-base font-medium text-zinc-400 hover:text-bronze-500 hover:bg-zinc-800 rounded-md">Unsere Leistungen</a>
+                <a href="#ueber-uns" class="block px-3 py-2 text-base font-medium text-zinc-400 hover:text-bronze-500 hover:bg-zinc-800 rounded-md">Über uns</a>
+                <a href="#kontakt" class="block px-3 py-2 text-base font-medium text-zinc-400 hover:text-bronze-500 hover:bg-zinc-800 rounded-md">Kontakt</a>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow pt-24">
+        <section id="start" class="relative py-20 lg:py-32 overflow-hidden flex items-center min-h-[85vh]">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Dunkles Fahrzeug" class="w-full h-full object-cover opacity-20" />
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-zinc-900 via-zinc-900/80 to-transparent"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+                        Für uns sind Autos <br>
+                        <span class="text-bronze-500">mehr als nur vier Räder</span> <br>
+                        und ein Lenkrad!
+                    </h1>
+                    <p class="text-lg sm:text-xl text-zinc-400 mb-10 font-light leading-relaxed max-w-2xl">
+                        Entdecken Sie unsere Leidenschaft für zuverlässige Fahrzeuge und exzellenten Service. Wir begleiten Sie sicher und transparent zu Ihrem nächsten Automobil.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#fahrzeuge" class="inline-flex justify-center items-center px-8 py-3.5 text-sm font-semibold rounded bg-bronze-500 text-zinc-900 hover:bg-bronze-400 transition-colors duration-300 shadow-lg shadow-bronze-500/20">
+                            Fahrzeuge entdecken
+                        </a>
+                        <a href="#kontakt" class="inline-flex justify-center items-center px-8 py-3.5 text-sm font-semibold rounded border border-zinc-600 text-zinc-300 hover:border-bronze-500 hover:text-bronze-500 transition-colors duration-300 bg-zinc-900/50 backdrop-blur-sm">
+                            Fahrzeugankauf
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="fahrzeuge" class="py-24 bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">Unsere Fahrzeuge</h2>
+                    <div class="w-16 h-1 bg-bronze-500 mx-auto rounded mb-6"></div>
+                    <p class="text-zinc-400 max-w-2xl mx-auto text-lg">
+                        Wir führen ein stets wechselndes, sorgfältig ausgewähltes Angebot an geprüften Fahrzeugen, die bereit für ihren nächsten Besitzer sind.
+                    </p>
+                </div>
+                <!-- Fahrzeug Karten Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    
+                    <!-- Fahrzeug 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden group hover:border-bronze-500/50 transition-colors duration-300 shadow-lg">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fahrzeug 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 right-4 bg-zinc-900/90 backdrop-blur-sm px-3 py-1 rounded text-xs font-semibold text-bronze-500 border border-bronze-500/30">Geprüft</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-4">Musterfahrzeug Limousine</h3>
+                            <div class="flex items-center justify-between text-sm text-zinc-500 border-t border-zinc-800 pt-4">
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> 2019</span>
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> Benzin</span>
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg> Automatik</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fahrzeug 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden group hover:border-bronze-500/50 transition-colors duration-300 shadow-lg">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fahrzeug 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 right-4 bg-zinc-900/90 backdrop-blur-sm px-3 py-1 rounded text-xs font-semibold text-bronze-500 border border-bronze-500/30">Geprüft</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-4">Musterfahrzeug SUV</h3>
+                            <div class="flex items-center justify-between text-sm text-zinc-500 border-t border-zinc-800 pt-4">
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> 2021</span>
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> Diesel</span>
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg> Automatik</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fahrzeug 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden group hover:border-bronze-500/50 transition-colors duration-300 shadow-lg">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fahrzeug 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 right-4 bg-zinc-900/90 backdrop-blur-sm px-3 py-1 rounded text-xs font-semibold text-bronze-500 border border-bronze-500/30">Geprüft</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-4">Musterfahrzeug Kompakt</h3>
+                            <div class="flex items-center justify-between text-sm text-zinc-500 border-t border-zinc-800 pt-4">
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> 2018</span>
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> Benzin</span>
+                                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg> Manuell</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <!-- Main CTA to mobile.de -->
+                    <a href="https://www.mobile.de/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-10 py-4 text-base font-bold rounded bg-bronze-500 text-zinc-900 hover:bg-bronze-400 transition-all duration-300 shadow-lg shadow-bronze-500/20 transform hover:-translate-y-1 group">
+                        <span>Aktuellen Bestand ansehen</span>
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                    <p class="text-sm text-zinc-500 mt-4">Sie werden direkt zu unserem Fahrzeugbestand auf mobile.de weitergeleitet.</p>
+                </div>
+            </div>
+        </section>
+        <section id="leistungen" class="py-24 bg-zinc-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">Unsere Leistungen</h2>
+                    <div class="w-16 h-1 bg-bronze-500 mx-auto rounded"></div>
+                    <p class="mt-6 text-zinc-400 max-w-2xl mx-auto">Ein Rundum-Sorglos-Paket für Ihren Fahrzeugkauf und -verkauf.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Service 1: Fahrzeugankauf -->
+                    <div class="bg-zinc-800/50 p-8 rounded-lg border border-zinc-700/50 hover:border-bronze-500/50 transition-colors duration-300 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-6 shadow-inner text-bronze-500">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-3">Fahrzeugankauf</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Wir kaufen Ihr Fahrzeug direkt an – unkompliziert, sicher und zu einem fairen Preis, auch wenn Sie kein Fahrzeug bei uns erwerben.
+                        </p>
+                    </div>
+                    <!-- Service 2: Faire Inzahlungnahme -->
+                    <div class="bg-zinc-800/50 p-8 rounded-lg border border-zinc-700/50 hover:border-bronze-500/50 transition-colors duration-300 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-6 shadow-inner text-bronze-500">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-3">Faire Inzahlungnahme</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Wir bewerten Ihr jetziges Fahrzeug transparent und marktgerecht, um den Wert direkt bei Ihrem Fahrzeugkauf bei uns zu verrechnen.
+                        </p>
+                    </div>
+                    <!-- Service 3: Kundenvermittlung -->
+                    <div class="bg-zinc-800/50 p-8 rounded-lg border border-zinc-700/50 hover:border-bronze-500/50 transition-colors duration-300 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-6 shadow-inner text-bronze-500">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-3">Vermittlungsverkauf</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Wir verkaufen Ihr Fahrzeug professionell im Kundenauftrag. Ersparen Sie sich den Stress – wir übernehmen die komplette Abwicklung.
+                        </p>
+                    </div>
+                    <!-- Service 4: Garantie (lg:col-start-2 if we want to center 2 items, but natural flow is fine) -->
+                    <div class="bg-zinc-800/50 p-8 rounded-lg border border-zinc-700/50 hover:border-bronze-500/50 transition-colors duration-300 flex flex-col items-center text-center lg:col-start-1 lg:ml-auto w-full lg:max-w-md">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-6 shadow-inner text-bronze-500">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-3">Bis zu 24 Monate Garantie</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Umfassende Gebrauchtwagengarantie für bis zu 24 Monate möglich. Schützen Sie sich zuverlässig vor unerwarteten Reparaturkosten.
+                        </p>
+                    </div>
+                    <!-- Service 5: TÜV & AU -->
+                    <div class="bg-zinc-800/50 p-8 rounded-lg border border-zinc-700/50 hover:border-bronze-500/50 transition-colors duration-300 flex flex-col items-center text-center lg:mr-auto w-full lg:max-w-md">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-6 shadow-inner text-bronze-500">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-3">TÜV & AU Neu</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Wir übergeben nahezu alle unsere Fahrzeuge mit frischer Haupt- und Abgasuntersuchung, damit Sie direkt und sicher durchstarten können.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="ueber-uns" class="py-24 bg-zinc-950">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-lg p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                    <!-- Decorative element -->
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-bronze-500/10 rounded-full blur-3xl"></div>
+                    
+                    <h2 class="text-3xl font-bold text-white mb-6">Über uns</h2>
+                    <div class="w-12 h-1 bg-bronze-500 mb-8 rounded"></div>
+                    
+                    <div class="space-y-6 text-zinc-400 text-lg leading-relaxed">
+                        <p class="text-white font-medium text-xl italic mb-4">
+                            "Für uns sind Autos mehr als nur vier Räder und ein Lenkrad!"
+                        </p>
+                        <p>
+                            Bei KAPA Automobile leben wir die Faszination für das Automobil. Vertrauen, höchste Qualität und absolute Transparenz sind die Grundpfeiler unserer täglichen Arbeit. Unser Ziel ist es, Ihnen den Kauf oder Verkauf Ihres Fahrzeugs so angenehm, sicher und unkompliziert wie möglich zu gestalten.
+                        </p>
+                        <p>
+                            Jedes Fahrzeug, das unser Haus verlässt, wird vorab genauestens geprüft. Egal, ob Sie einen praktischen Kleinwagen, einen geräumigen Familienkombi oder ein sportliches Zweitauto suchen – wir nehmen uns die Zeit, Sie ehrlich, kompetent und auf Augenhöhe zu beraten. 
+                        </p>
+                        <p>
+                            Wir stehen mit unserem Namen für solide Gebrauchtwagen und einen Service, der auch nach dem Kauf nicht endet. Überzeugen Sie sich selbst von unserer Leidenschaft!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="kontakt" class="py-24 bg-zinc-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">Kontakt</h2>
+                    <div class="w-16 h-1 bg-bronze-500 mx-auto rounded mb-8"></div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Contact Form (Left Side) -->
+                    <div class="lg:col-span-7 bg-zinc-950 p-8 rounded-lg border border-zinc-800 shadow-xl">
+                        <h3 class="text-xl font-semibold text-white mb-6">Senden Sie uns eine Nachricht</h3>
+                        <form action="#" method="POST" class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-zinc-400 mb-1">Name</label>
+                                <input type="text" id="name" name="name" required class="w-full bg-zinc-900 border border-zinc-700 rounded px-4 py-3 text-white focus:outline-none focus:border-bronze-500 focus:ring-1 focus:ring-bronze-500 transition-colors placeholder-zinc-600" placeholder="Ihr Name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-zinc-400 mb-1">E-Mail</label>
+                                <input type="email" id="email" name="email" required class="w-full bg-zinc-900 border border-zinc-700 rounded px-4 py-3 text-white focus:outline-none focus:border-bronze-500 focus:ring-1 focus:ring-bronze-500 transition-colors placeholder-zinc-600" placeholder="ihre@email.de">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-zinc-400 mb-1">Nachricht</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full bg-zinc-900 border border-zinc-700 rounded px-4 py-3 text-white focus:outline-none focus:border-bronze-500 focus:ring-1 focus:ring-bronze-500 transition-colors placeholder-zinc-600 resize-none" placeholder="Ihre Anfrage zu einem Fahrzeug, Ankauf oder Vermittlung..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-bronze-500 hover:bg-bronze-400 text-zinc-900 font-bold py-3.5 rounded transition-colors duration-300 mt-2">
+                                Nachricht absenden
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Contact Info & Direct Buttons (Right Side) -->
+                    <div class="lg:col-span-5 flex flex-col space-y-8">
+                        
+                        <!-- Important Notice -->
+                        <div class="bg-zinc-950 border-l-4 border-bronze-500 p-6 rounded-r shadow-lg">
+                            <h4 class="text-white font-semibold flex items-center gap-2 mb-2 text-lg">
+                                <svg class="w-6 h-6 text-bronze-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Wichtiger Hinweis
+                            </h4>
+                            <p class="text-zinc-300 text-base leading-relaxed">
+                                Termine und Besichtigungen <strong class="text-white">nur nach vorheriger Terminvereinbarung</strong>.
+                            </p>
+                        </div>
+                        <!-- Info Block (Address, Phone, Email) -->
+                        <div class="bg-zinc-950 p-6 rounded-lg border border-zinc-800 shadow-lg">
+                            <h4 class="text-xl font-semibold text-white mb-6">Unsere Kontaktdaten</h4>
+                            <ul class="space-y-4">
+                                <!-- Address -->
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-bronze-500 mt-1 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    <div>
+                                        <p class="text-zinc-300 font-medium">KAPA Automobile</p>
+                                        <p class="text-zinc-400 text-sm">Küferstraße 21</p>
+                                        <p class="text-zinc-400 text-sm">73257 Köngen</p>
+                                    </div>
+                                </li>
+                                <!-- Phone -->
+                                <li class="flex items-center">
+                                    <svg class="w-6 h-6 text-bronze-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                    <a href="tel:+4915786845412" class="text-zinc-300 hover:text-bronze-500 transition-colors">0157 86845412</a>
+                                </li>
+                                <!-- Email -->
+                                <li class="flex items-center">
+                                    <svg class="w-6 h-6 text-bronze-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    <a href="mailto:info@kapa-automobile.de" class="text-zinc-300 hover:text-bronze-500 transition-colors">info@kapa-automobile.de</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Round Icon Buttons (White matching the provided image) -->
+                        <div class="bg-zinc-950 p-6 rounded-lg border border-zinc-800 shadow-lg flex items-center justify-between">
+                            <span class="text-zinc-300 font-medium">Direkter Kontakt:</span>
+                            <div class="flex items-center gap-4">
+                                
+                                <!-- WhatsApp Icon Button -->
+                                <a href="https://wa.me/4915786845412" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white text-zinc-900 rounded-full flex items-center justify-center hover:bg-zinc-200 hover:scale-105 transition-all duration-200 shadow-lg cursor-pointer" title="Per WhatsApp kontaktieren">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                                    </svg>
+                                </a>
+                                <!-- Email Icon Button -->
+                                <a href="mailto:info@kapa-automobile.de" class="w-12 h-12 bg-white text-zinc-900 rounded-full flex items-center justify-center hover:bg-zinc-200 hover:scale-105 transition-all duration-200 shadow-lg cursor-pointer" title="E-Mail schreiben">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-zinc-950 py-10 border-t border-zinc-800 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- Footer Logo -->
+                <div class="flex-shrink-0">
+                    <img src="image.png" alt="KAPA Automobile Logo" class="h-8 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+                </div>
+                
+                <!-- Footer Links -->
+                <div class="flex space-x-6 text-sm text-zinc-500">
+                    <a href="#" class="hover:text-bronze-500 transition-colors">Impressum</a>
+                    <a href="#" class="hover:text-bronze-500 transition-colors">Datenschutz</a>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="text-sm text-zinc-600">
+                    &copy; 2026 KAPA Automobile. Alle Rechte vorbehalten.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple script for mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
