@@ -169,7 +169,7 @@
           <!-- Rechte Spalte: Showroom Highlight Karte -->
           <div class="hero-showroom-card vehicle-card" data-vehicle-id="hyundai-i30" data-mobile-url="https://suchen.mobile.de/fahrzeuge/details.html?id=49285157850720">
             <div class="showroom-card-media">
-              <img src="assets/images/cars/49285157850720.jpg" alt="Hyundai i30 Style im Bestand" width="600" height="380" fetchpriority="high">
+              <img src="assets/images/cars/hyundai-i30/1.jpg" alt="Hyundai i30 Style im Bestand" width="600" height="380" fetchpriority="high">
               <span class="showroom-badge">Neuzugang</span>
             </div>
             <div class="showroom-card-content">
@@ -210,7 +210,7 @@
           <!-- Fahrzeug 1: VW move up! -->
           <article class="vehicle-card" data-vehicle-id="vw-up" data-mobile-url="https://suchen.mobile.de/fahrzeuge/details.html?id=48640093369184">
             <div class="vehicle-media">
-              <img src="assets/images/cars/48640093369184.jpg" alt="Volkswagen move up!" class="vehicle-img" loading="lazy" width="640" height="420">
+              <img src="assets/images/cars/vw-up/1.jpg" alt="Volkswagen move up!" class="vehicle-img" loading="lazy" width="640" height="420">
             </div>
             <div class="vehicle-body">
               <div class="vehicle-header-info">
@@ -245,7 +245,7 @@
           <!-- Fahrzeug 2: Hyundai i30 Style -->
           <article class="vehicle-card" data-vehicle-id="hyundai-i30" data-mobile-url="https://suchen.mobile.de/fahrzeuge/details.html?id=49285157850720">
             <div class="vehicle-media">
-              <img src="assets/images/cars/49285157850720.jpg" alt="Hyundai i30 Style" class="vehicle-img" loading="lazy" width="640" height="420">
+              <img src="assets/images/cars/hyundai-i30/1.jpg" alt="Hyundai i30 Style" class="vehicle-img" loading="lazy" width="640" height="420">
             </div>
             <div class="vehicle-body">
               <div class="vehicle-header-info">
@@ -280,7 +280,7 @@
           <!-- Fahrzeug 3: Skoda Citigo FUN -->
           <article class="vehicle-card" data-vehicle-id="skoda-citigo" data-mobile-url="https://suchen.mobile.de/fahrzeuge/details.html?id=48268359651136">
             <div class="vehicle-media">
-              <img src="assets/images/cars/48268359651136.jpg" alt="Skoda Citigo FUN" class="vehicle-img" loading="lazy" width="640" height="420">
+              <img src="assets/images/cars/skoda-citigo/1.jpg" alt="Skoda Citigo FUN" class="vehicle-img" loading="lazy" width="640" height="420">
             </div>
             <div class="vehicle-body">
               <div class="vehicle-header-info">
@@ -315,7 +315,7 @@
           <!-- Fahrzeug 4: Opel Adam Rocks -->
           <article class="vehicle-card" data-vehicle-id="opel-adam" data-mobile-url="https://suchen.mobile.de/fahrzeuge/details.html?id=46116543481024">
             <div class="vehicle-media">
-              <img src="assets/images/cars/46116543481024.jpg" alt="Opel Adam Rocks" class="vehicle-img" loading="lazy" width="640" height="420">
+              <img src="assets/images/cars/opel-adam/1.jpg" alt="Opel Adam Rocks" class="vehicle-img" loading="lazy" width="640" height="420">
             </div>
             <div class="vehicle-body">
               <div class="vehicle-header-info">
@@ -783,9 +783,38 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
-      <div class="vehicle-modal-image-wrap">
-        <img src="" alt="" class="vehicle-modal-image" id="modalVehicleImg">
-        <span class="vehicle-modal-badge" id="modalVehicleBadge">Geprüfter Gebrauchtwagen</span>
+      <!-- Interaktive Fahrzeug-Bildergalerie -->
+      <div class="vehicle-gallery-container">
+        <div class="vehicle-gallery-main" id="modalGalleryMain">
+          <img src="" alt="" class="vehicle-modal-image" id="modalVehicleImg">
+          <span class="vehicle-modal-badge" id="modalVehicleBadge">Geprüfter Gebrauchtwagen</span>
+          
+          <!-- Bildzähler -->
+          <div class="gallery-counter-badge" id="galleryCounterBadge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            <span id="galleryCounterText">1 / 1</span>
+          </div>
+
+          <!-- Vollbild Button -->
+          <button type="button" class="gallery-fullscreen-btn" id="galleryFullscreenBtn" aria-label="Großansicht öffnen" title="Großansicht öffnen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+          </button>
+
+          <!-- Vor- und Zurück-Navigation -->
+          <button type="button" class="gallery-nav-btn gallery-nav-prev" id="galleryPrevBtn" aria-label="Vorheriges Bild" title="Vorheriges Bild">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button type="button" class="gallery-nav-btn gallery-nav-next" id="galleryNextBtn" aria-label="Nächstes Bild" title="Nächstes Bild">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+
+        <!-- Thumbnail-Leiste aller Fahrzeugbilder -->
+        <div class="vehicle-gallery-thumbs-wrapper">
+          <div class="vehicle-gallery-thumbs" id="modalGalleryThumbs" role="tablist" aria-label="Fahrzeugbilder Übersicht">
+            <!-- Dynamisch über JS befüllt -->
+          </div>
+        </div>
       </div>
 
       <div class="vehicle-modal-content">
@@ -842,6 +871,23 @@
       <button class="btn-cookie-deny" id="cookieDenyBtn">Nur essenzielle</button>
     </div>
   </aside>
+
+  <!-- ==================== FAHRZEUG VOLLBILD LIGHTBOX ==================== -->
+  <div class="vehicle-lightbox-backdrop" id="vehicleLightbox" aria-hidden="true" role="dialog" aria-label="Fahrzeugbild Großansicht">
+    <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Großansicht schließen" title="Schließen (Esc)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <button type="button" class="lightbox-nav-btn lightbox-prev" id="lightboxPrevBtn" aria-label="Vorheriges Bild" title="Vorheriges Bild (Pfeiltaste links)">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button type="button" class="lightbox-nav-btn lightbox-next" id="lightboxNextBtn" aria-label="Nächstes Bild" title="Nächstes Bild (Pfeiltaste rechts)">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption">Bild 1 von 1</div>
+    </div>
+  </div>
 
   <!-- Script -->
   <script src="js/main.js" defer></script>
