@@ -1,0 +1,15 @@
+# Raw office & doc files
+*.docx
+*.doc
+
+# Temporary working images & extracted files
+*.extracted.html
+gemini_code_extracted.html
+IMG-*.jpg
+Screenshot_*.jpg
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
