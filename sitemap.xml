@@ -20,7 +20,13 @@
   </url>
   <url>
     <loc>https://kapa-automobile.de/datenschutz.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kapa-automobile.de/gewaehrleistung.html</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
